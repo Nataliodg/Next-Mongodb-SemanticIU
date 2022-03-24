@@ -53,7 +53,7 @@ export default function NewTaksForm() {
     //Creamos una funcion para crear los datos:
     const createTask = async () => {
         try {
-            await fetch('http://localhost:3000/api/tasks' , {
+            await fetch('https://next-mongodb-semantic-iu.vercel.app/api/tasks' , {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json"
@@ -68,7 +68,7 @@ export default function NewTaksForm() {
     //Actualizamos los datos
     const updateTask = async () => {
         try {
-            await fetch('http://localhost:3000/api/tasks/' + query.id , {
+            await fetch('https://next-mongodb-semantic-iu.vercel.app/api/tasks/' + query.id , {
                 method: 'PUT',
                 headers: {
                     "Content-Type": "application/json"
@@ -85,7 +85,7 @@ export default function NewTaksForm() {
 
     //Extrae los datos 
     const getTask = async () =>{
-        const res = await fetch('http://localhost:3000/api/tasks/' + query.id);
+        const res = await fetch('https://next-mongodb-semantic-iu.vercel.app/api/tasks/' + query.id);
         const data = await res.json();
         setNewTask({
             title: data.title, 
