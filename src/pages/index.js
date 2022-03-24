@@ -59,7 +59,7 @@ export default function HomePage({tasks}) {
 //Simplifica el useEffect de React
 export const getServerSideProps = async (ctx) => {
   //Realiza la peticion
-  const res = await fetch('http://localhost:3000/api/tasks');
+  const res = await fetch('https://next-mongodb-semantic-iu.vercel.app/api/tasks');
 
   //Lo convierte a JSON
   const tasks = await res.json();
