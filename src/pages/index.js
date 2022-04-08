@@ -33,11 +33,13 @@ export default function HomePage({tasks}) {
     <Container fluid
                 style={{padding: "20px"}}
                 >
-      <Card.Group itemsPerRow={4}>
+      <Card.Group className='container2'>
         {tasks.map((task) => (
-            <Card key={task.id}
-                  color='green'>
-              <Card.Content>
+            <Card className='item2'
+                  key={task.id}
+                  color='green'
+                  >
+              <Card.Content >
                 <Card.Header textAlign="center">{task.title}</Card.Header>
                 <p>{task.description}</p>
               </Card.Content>

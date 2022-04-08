@@ -100,15 +100,18 @@ export default function NewTaksForm() {
 
     return (
     <Grid 
+        
         centered
         verticalAlign="middle"
         columns="3"
         style={{height: "80vh"}}>
-        <Grid.Row>
-            <Grid.Column textAlign="center">
+        <Grid.Row >
+        
+            <Grid.Column mobile={12} tablet={8} computer={6}  textAlign="center" >
                 <h1>{query.id ? 'Update Task' : 'Create Task'}</h1>
                 <Form onSubmit={handleSubmit}>
-                    <Form.Input label="Title" 
+                    <Form.Input 
+                                label="Title" 
                                 placeholder="Title" 
                                 name="title"
                                 onChange={handleChange}

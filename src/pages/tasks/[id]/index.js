@@ -43,7 +43,7 @@ export default function TasksDetails({task, error}) {
         columns="3"
         style={{height: "80vh"}}>
         <Grid.Row>
-            <Grid.Column textAlign="center">
+            <Grid.Column mobile={12} tablet={8} computer={6} textAlign="center">
                 <h1>{task.title}</h1>
                 <p>{task.description}</p>
                 <div>
