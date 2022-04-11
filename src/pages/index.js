@@ -30,6 +30,8 @@ export default function HomePage({tasks}) {
 
 //Render a list of task
   return (
+    <>
+
     <Container fluid
                 style={{padding: "20px"}}
                 >
@@ -55,6 +57,7 @@ export default function HomePage({tasks}) {
         ))}
       </Card.Group>
     </Container>
+    </>
   )
 }
 
